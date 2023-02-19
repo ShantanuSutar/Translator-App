@@ -103,3 +103,26 @@ body {
   opacity: 0.8;
   cursor: pointer;
 }
+
+@media (max-width: 600px) {
+  .container {
+    margin: 0;
+    max-width: 20rem;
+    height: 35rem;
+  }
+  .container .text-input {
+    display: flex;
+    flex-direction: column;
+  }
+  .container textarea {
+    max-height: 7rem;
+  }
+  .controls {
+    display: flex;
+    flex-direction: column;
+  }
+  .container .fa-copy,
+  .fa-volume-up {
+    margin-top: 10px;
+  }
+}
