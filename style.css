@@ -4,3 +4,46 @@
   box-sizing: border-box;
   font-family: "Shantell Sans", sans-serif;
 }
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #0575e6, #00f260);
+}
+
+.container {
+  width: 45rem;
+  height: 26rem;
+  background: white;
+  padding: 30px;
+  border-radius: 7px;
+}
+
+.wrapper {
+  border-radius: 5px;
+  border: 1px solid #bbb;
+}
+
+.wrapper .text-input {
+  display: flex;
+}
+.wrapper .text-input .text {
+  border-radius: 5px 0 0 0;
+}
+.wrapper .text-input .trans {
+  border-radius: 0 5px 0 0;
+  border-left: 1px solid #bbb;
+}
+
+.text-input textarea {
+  height: 15rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: none;
+  border-bottom: 1px solid #bbb;
+  font-size: 18px;
+  resize: none;
+  padding: 5px;
+}
