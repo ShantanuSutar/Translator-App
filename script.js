@@ -3,6 +3,8 @@ const translateBtn = document.querySelector(".btn");
 const fromText = document.querySelector(".text");
 const toText = document.querySelector(".trans");
 const exchangeBtn = document.querySelector(".exchange");
+const copyBtn = document.querySelectorAll(".fa-copy");
+const soundbtn = document.querySelectorAll(".fa-volume-up");
 
 selectTag.forEach((tag, id) => {
   for (const country_code in countries) {
@@ -43,4 +45,15 @@ exchangeBtn.addEventListener("click", () => {
   temp = selectTag[0].value;
   selectTag[0].value = selectTag[1].value;
   selectTag[1].value = temp;
+});
+
+copyBtn.forEach((copyBtn) => {
+  copyBtn.addEventListener("click", () => {
+    // if clicked icon has from id, copy fromText value to clipboard else copy toText value to clipboard
+    if (copyBtn.id == "from") {
+      navigator.clipboard.writeText(fromText.value);
+    } else {
+      navigator.clipboard.writeText(toText.value);
+    }
+  });
 });
