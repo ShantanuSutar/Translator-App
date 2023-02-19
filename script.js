@@ -57,3 +57,18 @@ copyBtn.forEach((copyBtn) => {
     }
   });
 });
+
+soundbtn.forEach((soundbtn) => {
+  soundbtn.addEventListener("click", () => {
+    let utterance;
+    // if clicked icon has fromSound id, speak the fromText value else speak the toText value
+    if (soundbtn.id == "fromSound") {
+      utterance = new SpeechSynthesisUtterance(fromText.value);
+      utterance.lang = selectTag[0].value;
+    } else {
+      utterance = new SpeechSynthesisUtterance(toText.value);
+      utterance.lang = selectTag[1].value;
+    }
+    speechSynthesis.speak(utterance); // speak the utterance
+  });
+});
