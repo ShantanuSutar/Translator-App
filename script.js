@@ -2,6 +2,7 @@ const selectTag = document.querySelectorAll("select");
 const translateBtn = document.querySelector(".btn");
 const fromText = document.querySelector(".text");
 const toText = document.querySelector(".trans");
+const exchangeBtn = document.querySelector(".exchange");
 
 selectTag.forEach((tag, id) => {
   for (const country_code in countries) {
@@ -29,6 +30,17 @@ translateBtn.addEventListener("click", () => {
     .then((res) => res.json())
     .then((result) => {
       toText.value = result.responseData.translatedText;
-      console.log(toText.value);
     });
+});
+
+exchangeBtn.addEventListener("click", () => {
+  //exchanging text
+  let temp = fromText.value;
+  fromText.value = toText.value;
+  toText.value = temp;
+
+  //exchanging selected option
+  temp = selectTag[0].value;
+  selectTag[0].value = selectTag[1].value;
+  selectTag[1].value = temp;
 });
