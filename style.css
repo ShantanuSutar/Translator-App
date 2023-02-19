@@ -47,3 +47,59 @@ body {
   resize: none;
   padding: 5px;
 }
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.controls li {
+  list-style: none;
+}
+.controls .row {
+  display: flex;
+  padding: 15px;
+  align-items: center;
+  justify-content: center;
+}
+.controls .icons i {
+  font-size: 18px;
+  padding: 0 10px;
+}
+.controls i:hover {
+  color: gray;
+  cursor: pointer;
+}
+.controls select {
+  font-size: 18px;
+  margin-left: 25px;
+  border: none;
+  background: none;
+  border-left: 1px solid #bbb;
+  padding-left: 25px;
+}
+
+.controls select:hover {
+  cursor: pointer;
+}
+
+.controls .exchange {
+  font-size: 19px;
+}
+
+.container .btn {
+  width: 100%;
+  margin-top: 20px;
+  height: 3rem;
+  font-size: 19px;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  background: linear-gradient(to right, #0575e6, #00f260);
+}
+
+.container .btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
